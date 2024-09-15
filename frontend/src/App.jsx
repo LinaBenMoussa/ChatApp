@@ -1,6 +1,6 @@
 import './App.css'
 import { useAuthContext } from './context/AuthContext.jsx';
-import Home from './pages/home/home.jsx'
+import Home from './pages/home/Home.jsx'
 import Login from './pages/login/Login.jsx'
 import SignUp from './pages/signup/SignUp.jsx'
 import { Toaster } from 'react-hot-toast';
