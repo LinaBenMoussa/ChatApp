@@ -1,3 +1,6 @@
+import CreateUser from './admin/CreateUser.jsx';
+import EditUser from './admin/EditUser.jsx';
+import UserTable from './admin/UserTable.jsx';
 import './App.css'
 import { useAuthContext } from './context/AuthContext.jsx';
 import Home from './pages/home/Home.jsx'
@@ -15,6 +18,10 @@ function App() {
       <Route path='/'  element={!authUser? <Navigate to='login' />:<Home />} />
       <Route path='login' element={authUser? <Navigate to='/' />:<Login />} />
       <Route path='signup' element={authUser? <Navigate to='/' />:<SignUp />} />
+      <Route path="/users/edit/:id" element={<EditUser />} />
+      <Route path="/user/create" element={<CreateUser />} />
+      <Route path="/admin" element={<UserTable />} />
+
       </Routes>
     </div>
   )

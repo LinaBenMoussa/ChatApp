@@ -27,7 +27,7 @@ try {
 
     const receiverSocketId=getReceiverSocketId(receiverId)
     if(receiverSocketId){
-        io.to(receiverSocketId).emit("new message",newMessage)
+        io.to(receiverSocketId).emit("new message",(newMessage))
     }
 
     res.status(200).json(newMessage);

@@ -15,7 +15,7 @@ server.listen(PORT,() => {
     console.log(`Server running on port ${PORT}`)
 });
 app.use(cookieParser());
-app.use(express.json()); 
+app.use(express.json());
 app.use("/api/auth",authRoutes);
 app.use("/api/messages",messageRoutes);
 app.use("/api/users",userRoutes);

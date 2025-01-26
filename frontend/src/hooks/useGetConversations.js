@@ -23,7 +23,7 @@ const useGetConversations = () => {
     }
     getConversations()
   },[])
-  return {loading,conversations}
+  return {loading,conversations,setConversation}
 }
 
 export default useGetConversations

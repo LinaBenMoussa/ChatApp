@@ -7,6 +7,17 @@ background-size: cover;
 background-position: center;
 background-attachment: fixed
 }
+#containerUser{
+	background-color: white; /* Définit le fond blanc */
+  padding: 20px; 
+  margin: 20%;          /* Ajoute un espacement interne */
+  border-radius: 8px;      /* Ajoute des coins arrondis */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce */
+}
+#butonDanger{
+	background-color: red;
+	color: aliceblue;
+}
 .shake {
 	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
 	transform: translate3d(0, 0, 0);
@@ -36,3 +47,15 @@ background-attachment: fixed
 		transform: translate3d(4px, 0, 0);
 	}
 }
+.table-container table {
+	width: 100%;
+	border-collapse: separate; /* Nécessaire pour que border-spacing fonctionne */
+	border-spacing: 10px 5px; /* Horizontal: 10px, Vertical: 5px */
+  }
+  
+  .table-container th,
+  .table-container td {
+	padding: 8px;
+	text-align: left;
+  }
+  

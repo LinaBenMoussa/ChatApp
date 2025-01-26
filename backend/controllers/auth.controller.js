@@ -1,6 +1,8 @@
 import User from "../models/user.model.js"
 import bcrypt from "bcryptjs"
 import generateTokenAndSetCookie from "../utils/generateToken.js"
+import { io } from "../socket/socket.js";
+
 export const loginUser=async(req,res)=>{
 try {
     const {username,password}=req.body
@@ -47,6 +49,9 @@ export const signupUser=async(req,res)=>{
             //generate token
             generateTokenAndSetCookie(newUser._id,res);
             await newUser.save();
+            
+            io.emit("new User",(newUser))
+            
             res.status(200).json({
             _id:newUser._id,
             fullName:newUser.fullName,
